@@ -1,5 +1,73 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border;
+}
+
+body {
+  background-color: #f5efdb;
+  max-height: 100%;
+  max-width: 100%;
+}
+body .navigation {
+  display: flex;
+  flex-direction: row;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 10px;
+  margin: auto;
+}
+body #nav-name {
+  color: #282b28;
+}
+body #nav-project {
+  color: #f07f8d;
+  padding-left: 14px;
+  cursor: pointer;
+}
+body .navigation #nav-link {
+  display: none;
+  transition: all 0.2s ease;
+}
+body .navigation:hover #nav-project {
+  display: none;
+  transition: all 0.2s ease;
+}
+body .navigation:hover #nav-link {
+  display: inline;
+  transition: all 0.2s ease;
+}
+body #nav-link {
+  padding-left: 14px;
+  transition: all 0.2s ease;
+}
+body #nav-link a {
+  text-decoration: none;
+  color: #f07f8d;
+}
+body #nav-arrow svg {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  padding-left: 20px;
+}
+body .st0 {
+  fill: none;
+  stroke: #f07f8d;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+body #footer-arrow svg {
+  width: 30px;
+  margin: auto;
+  padding-left: 20px;
+}
+body .st1 {
+  fill: none;
+  stroke: #1c6c45;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
 }
 
 /*# sourceMappingURL=main.css.map */

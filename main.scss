@@ -1,3 +1,93 @@
-*{
-    box-sizing: border-box;
+// Colors
+$beige: rgb(245, 239, 219);
+$pink: rgb(240, 127, 141);
+$green: rgb(28, 108, 69);
+$grey: rgb(40, 43, 40);
+// Fonts
+@mixin regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
+@mixin medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+@mixin bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+*{box-sizing: border;}
+// html {overflow: hidden;}
+
+body {
+    background-color: $beige;
+    max-height: 100%;
+    max-width: 100%;
+
+    // Navigation
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        @include medium;
+        font-size: 1em;
+        padding: 10px;
+        margin: auto;
+    }
+    #nav-name {
+        color: $grey;
+    }
+    #nav-project {
+        color: $pink;
+        padding-left: 14px;
+        cursor: pointer;
+    }
+    .navigation #nav-link {
+        display: none;
+        transition: all .2s ease;
+    }
+    .navigation:hover #nav-project {
+        display: none;
+        transition: all .2s ease;
+    }
+    .navigation:hover #nav-link {
+        display: inline;
+        transition: all .2s ease;
+    }
+    #nav-link {
+        padding-left: 14px;
+        transition: all .2s ease;
+    }
+    #nav-link a {
+        text-decoration: none;
+        color: $pink;
+    }
+    #nav-arrow svg {
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        padding-left: 20px;
+    }
+    .st0 {
+        fill: none;
+        stroke: $pink;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+    }
+    // Contact Form
+
+#footer-arrow svg {
+    width: 30px;
+    margin: auto;
+    padding-left: 20px;
+}
+.st1 {
+    fill: none;
+    stroke: $green;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+}
+
