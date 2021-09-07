@@ -18,7 +18,7 @@ $grey: rgb(40, 43, 40);
 }
 
 *{box-sizing: border-box;}
-// html {overflow: hidden;}
+html {overflow: hidden;}
 
 body {
     background-color: $beige;
@@ -30,7 +30,7 @@ body {
         display: flex;
         flex-direction: row;
         @include medium;
-        font-size: 1em;
+        font-size: 16px;
         padding: 10px 28px;
         margin: auto;
     }
@@ -42,13 +42,13 @@ body {
         padding-left: 14px;
         cursor: pointer;
     }
-    .navigation .link {
+    .navigation .nav-link-wrap {
         display: none;
     }
     .navigation:hover #nav-project {
         display: none;
     }
-    .navigation:hover .link {
+    .navigation:hover .nav-link-wrap {
         display: inline;
     }
     .link {
@@ -61,12 +61,13 @@ body {
     }
     .nav-arrow {
         fill: none;
-        stroke: #F07F8D;
+        stroke: $pink;
         stroke-width: 1.5;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-miterlimit: 10;
     }
+
     // Contact Form
     .contact-card {
         border: 2px solid $grey;
@@ -94,6 +95,15 @@ body {
         left: 0;
         width: 460px;
         z-index: 4;
+        animation: rotate 40s infinite linear;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
     }
     .form {
         display: flex;
@@ -143,13 +153,47 @@ body {
         border-radius: 20px;
         max-width: 85px;
         margin-left: 88px;
+        cursor: pointer;
         transition: all .2s ease;
     }
     #send-btn:hover {
         background-color: $green;
         transition: all .2s ease;
     }
+
     // Footer
-    
+    .footer {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-30px, -50%);
+    }
+    .footer .footer-arrow {
+        display: none;
+    }
+    .footer:hover .footer-arrow {
+        display: inline;
+    }
+    .footer-arrow {
+        fill: none;
+        stroke: $green;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+    }
+    #footer-link {
+        @include medium;
+        font-size: 16px;
+        text-decoration: none;
+        color: $green;
+    }
+    .footer-link-wrap {
+        cursor: pointer;
+        display: inline;
+    }
 }
 
