@@ -182,5 +182,13 @@ body .footer-link-wrap {
   cursor: pointer;
   display: inline;
 }
+@media only screen and (max-width: 600px) {
+  body .navigation {
+    margin: auto;
+  }
+  body .contact-card {
+    width: 50%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
