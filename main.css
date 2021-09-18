@@ -11,6 +11,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 body .navigation {
   display: flex;
   flex-direction: row;
@@ -20,31 +21,39 @@ body .navigation {
   padding: 10px 28px;
   margin: auto;
 }
+
 body #nav-name {
   color: #282b28;
 }
+
 body #nav-project {
   color: #f07f8d;
   padding-left: 14px;
   cursor: pointer;
 }
+
 body .navigation .nav-link-wrap {
   display: none;
 }
+
 body .navigation:hover #nav-project {
   display: none;
 }
+
 body .navigation:hover .nav-link-wrap {
   display: inline;
 }
+
 body .nav-link-wrap {
   padding-left: 14px;
   cursor: pointer;
 }
+
 body #nav-link a {
   text-decoration: none;
   color: #f07f8d;
 }
+
 body .nav-arrow {
   fill: none;
   stroke: #f07f8d;
@@ -53,6 +62,7 @@ body .nav-arrow {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 body .contact-card {
   border: 2px solid #282b28;
   background-color: #f5efdb;
@@ -67,12 +77,14 @@ body .contact-card {
   transform: translate(-50%, -50%);
   z-index: 2;
 }
+
 body #green-block {
   background-color: #1c6c45;
   width: 340px;
   box-shadow: -2px 0 0 #282b28 inset;
   z-index: 3;
 }
+
 body #card-sticker {
   position: absolute;
   top: 0;
@@ -81,6 +93,7 @@ body #card-sticker {
   z-index: 4;
   animation: rotate 40s infinite linear;
 }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -95,6 +108,7 @@ body .form {
   vertical-align: middle;
   padding-left: 60px;
 }
+
 body #form-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -103,9 +117,11 @@ body #form-title {
   padding: 28px 0 0 88px;
   margin: 0;
 }
+
 body #form-title span {
   color: #f07f8d;
 }
+
 body #form-sub {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -114,6 +130,7 @@ body #form-sub {
   padding: 2px 0 28px 88px;
   margin: 0;
 }
+
 body .form-input, body #form-message {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -126,10 +143,12 @@ body .form-input, body #form-message {
   background-color: #f5efdb;
   border: 2px solid #282b28;
 }
+
 body #form-message {
   max-height: 100px;
   margin-bottom: 20px;
 }
+
 body #send-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -144,10 +163,12 @@ body #send-btn {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
 body #send-btn:hover {
   background-color: #1c6c45;
   transition: all 0.2s ease;
 }
+
 body .footer {
   display: flex;
   flex-direction: row;
@@ -157,12 +178,15 @@ body .footer {
   left: 50%;
   transform: translate(-30px, -50%);
 }
+
 body .footer .footer-arrow {
   display: none;
 }
+
 body .footer:hover .footer-arrow {
   display: inline;
 }
+
 body .footer-arrow {
   fill: none;
   stroke: #1c6c45;
@@ -171,6 +195,7 @@ body .footer-arrow {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 body #footer-link {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -178,17 +203,22 @@ body #footer-link {
   text-decoration: none;
   color: #1c6c45;
 }
+
 body .footer-link-wrap {
   cursor: pointer;
   display: inline;
 }
+
 @media only screen and (max-width: 600px) {
   body .navigation {
     margin: auto;
   }
+
   body .contact-card {
     width: 50%;
   }
 }
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.scss.map */
 
 /*# sourceMappingURL=main.css.map */

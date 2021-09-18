@@ -1,208 +1,223 @@
-// Colors
-$beige: rgb(245, 239, 219);
-$pink: rgb(240, 127, 141);
-$green: rgb(28, 108, 69);
-$grey: rgb(40, 43, 40);
-// Fonts
-@mixin regular {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-@mixin medium {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-}
-@mixin bold {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+* {
+  box-sizing: border-box;
 }
 
-*{box-sizing: border-box;}
-html {overflow: hidden;}
+html {
+  overflow: hidden;
+}
 
 body {
-    background-color: $beige;
-    height: 100vh;
-    width: 100vw;
-
-    // Navigation
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        @include medium;
-        font-size: 16px;
-        padding: 10px 28px;
-        margin: auto;
-    }
-    #nav-name {
-        color: $grey;
-    }
-    #nav-project {
-        color: $pink;
-        padding-left: 14px;
-        cursor: pointer;
-    }
-    .navigation .nav-link-wrap {
-        display: none;
-    }
-    .navigation:hover #nav-project {
-        display: none;
-    }
-    .navigation:hover .nav-link-wrap {
-        display: inline;
-    }
-    .nav-link-wrap {
-        padding-left: 14px;
-        cursor: pointer;
-    }
-    #nav-link a {
-        text-decoration: none;
-        color: $pink;
-    }
-    .nav-arrow {
-        fill: none;
-        stroke: $pink;
-        stroke-width: 1.5;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-    }
-
-    // Contact Form
-    .contact-card {
-        border: 2px solid $grey;
-        background-color: $beige;
-        box-shadow: 13px 13px 0px $grey;
-        width: 860px;
-        height: 460px;
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-    }
-    #green-block {
-        background-color: $green;
-        width: 340px;
-        box-shadow: -2px 0 0 $grey inset;
-        z-index: 3;
-    }
-    #card-sticker {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 460px;
-        z-index: 4;
-        animation: rotate 40s infinite linear;
-    }
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(359deg);
-        }
-    }
-    .form {
-        display: flex;
-        flex-direction: column;
-        vertical-align: middle;
-        padding-left: 60px;
-    }
-    #form-title {
-        @include bold;
-        color: $grey;
-        font-size: 42px;
-        padding: 28px 0 0 88px;
-        margin: 0;
-    }
-    #form-title span {
-        color: $pink;
-    }
-    #form-sub {
-        @include regular;
-        color: $grey;
-        font-size: 12px;
-        padding: 2px 0 28px 88px;
-        margin: 0;
-    }
-    .form-input, #form-message{
-        @include regular;
-        font-size: 10px;
-        color: $grey;
-        text-decoration: none;
-        padding: 7px;
-        max-width: 230px;
-        margin: 10px 88px;
-        background-color: $beige;
-        border: 2px solid $grey;
-    }
-    #form-message {
-        max-height: 100px;
-        margin-bottom: 20px;
-    }
-    #send-btn {
-        @include bold;
-        border: 2px solid $grey;
-        font-size: 16px;
-        color: $beige;
-        background-color: $pink;
-        padding: 5px;
-        border-radius: 20px;
-        max-width: 85px;
-        margin-left: 88px;
-        cursor: pointer;
-        transition: all .2s ease;
-    }
-    #send-btn:hover {
-        background-color: $green;
-        transition: all .2s ease;
-    }
-
-    // Footer
-    .footer {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translate(-30px, -50%);
-    }
-    .footer .footer-arrow {
-        display: none;
-    }
-    .footer:hover .footer-arrow {
-        display: inline;
-    }
-    .footer-arrow {
-        fill: none;
-        stroke: $green;
-        stroke-width: 1.5;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-    }
-    #footer-link {
-        @include medium;
-        font-size: 16px;
-        text-decoration: none;
-        color: $green;
-    }
-    .footer-link-wrap {
-        cursor: pointer;
-        display: inline;
-    }
-    // Media Queries
-    @media only screen and (max-width: 600px) {
-        .navigation {
-            margin: auto;
-        }
-        .contact-card {
-            width: 50%;
-        }
-    }
+  background-color: #f5efdb;
+  height: 100vh;
+  width: 100vw;
 }
 
+body .navigation {
+  display: flex;
+  flex-direction: row;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 28px;
+  margin: auto;
+}
+
+body #nav-name {
+  color: #282b28;
+}
+
+body #nav-project {
+  color: #f07f8d;
+  padding-left: 14px;
+  cursor: pointer;
+}
+
+body .navigation .nav-link-wrap {
+  display: none;
+}
+
+body .navigation:hover #nav-project {
+  display: none;
+}
+
+body .navigation:hover .nav-link-wrap {
+  display: inline;
+}
+
+body .nav-link-wrap {
+  padding-left: 14px;
+  cursor: pointer;
+}
+
+body #nav-link a {
+  text-decoration: none;
+  color: #f07f8d;
+}
+
+body .nav-arrow {
+  fill: none;
+  stroke: #f07f8d;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+body .contact-card {
+  border: 2px solid #282b28;
+  background-color: #f5efdb;
+  box-shadow: 13px 13px 0px #282b28;
+  width: 860px;
+  height: 460px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+body #green-block {
+  background-color: #1c6c45;
+  width: 340px;
+  box-shadow: -2px 0 0 #282b28 inset;
+  z-index: 3;
+}
+
+body #card-sticker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 460px;
+  z-index: 4;
+  animation: rotate 40s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+body .form {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  padding-left: 60px;
+}
+
+body #form-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #282b28;
+  font-size: 42px;
+  padding: 28px 0 0 88px;
+  margin: 0;
+}
+
+body #form-title span {
+  color: #f07f8d;
+}
+
+body #form-sub {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #282b28;
+  font-size: 12px;
+  padding: 2px 0 28px 88px;
+  margin: 0;
+}
+
+body .form-input, body #form-message {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #282b28;
+  text-decoration: none;
+  padding: 7px;
+  max-width: 230px;
+  margin: 10px 88px;
+  background-color: #f5efdb;
+  border: 2px solid #282b28;
+}
+
+body #form-message {
+  max-height: 100px;
+  margin-bottom: 20px;
+}
+
+body #send-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  border: 2px solid #282b28;
+  font-size: 16px;
+  color: #f5efdb;
+  background-color: #f07f8d;
+  padding: 5px;
+  border-radius: 20px;
+  max-width: 85px;
+  margin-left: 88px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+body #send-btn:hover {
+  background-color: #1c6c45;
+  transition: all 0.2s ease;
+}
+
+body .footer {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-30px, -50%);
+}
+
+body .footer .footer-arrow {
+  display: none;
+}
+
+body .footer:hover .footer-arrow {
+  display: inline;
+}
+
+body .footer-arrow {
+  fill: none;
+  stroke: #1c6c45;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+body #footer-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #1c6c45;
+}
+
+body .footer-link-wrap {
+  cursor: pointer;
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  body .navigation {
+    margin: auto;
+  }
+
+  body .contact-card {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=main.scss.map */
