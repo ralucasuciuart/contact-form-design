@@ -1,3 +1,8 @@
+$pink: #f07f8d;
+$lgreen: #1c6c45;
+$dgreen: #282b28;
+$beige: #f5efdb;
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +12,8 @@ html {
 }
 
 body {
-  background-color: #f5efdb;
+  background-color: beige;
+  background-color: $beige;
   height: 100vh;
   width: 100vw;
 }
@@ -23,11 +29,13 @@ body .navigation {
 }
 
 body #nav-name {
-  color: #282b28;
+  color: black;
+  color: $dgreen;
 }
 
 body #nav-project {
-  color: #f07f8d;
+  color: pink;
+  color: $pink;
   padding-left: 14px;
   cursor: pointer;
 }
@@ -51,12 +59,12 @@ body .nav-link-wrap {
 
 body #nav-link a {
   text-decoration: none;
-  color: #f07f8d;
+  color: $pink;
 }
 
 body .nav-arrow {
   fill: none;
-  stroke: #f07f8d;
+  stroke: $pink;
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -64,9 +72,10 @@ body .nav-arrow {
 }
 
 body .contact-card {
-  border: 2px solid #282b28;
-  background-color: #f5efdb;
-  box-shadow: 13px 13px 0px #282b28;
+  border: 2px solid $dgreen;
+  background-color: beige;
+  background-color: $beige;
+  box-shadow: 13px 13px 0px $dgreen;
   width: 860px;
   height: 460px;
   display: flex;
@@ -79,9 +88,10 @@ body .contact-card {
 }
 
 body #green-block {
-  background-color: #1c6c45;
+  background-color: green;
+  background-color: $lgreen;
   width: 340px;
-  box-shadow: -2px 0 0 #282b28 inset;
+  box-shadow: -2px 0 0 $dgreen inset;
   z-index: 3;
 }
 
@@ -102,6 +112,7 @@ body #card-sticker {
     transform: rotate(359deg);
   }
 }
+
 body .form {
   display: flex;
   flex-direction: column;
@@ -112,20 +123,23 @@ body .form {
 body #form-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #282b28;
+  color: black;
+  color: $dgreen;
   font-size: 42px;
   padding: 28px 0 0 88px;
   margin: 0;
 }
 
 body #form-title span {
-  color: #f07f8d;
+  color: pink;
+  color: $pink
 }
 
 body #form-sub {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: #282b28;
+  color: black;
+  color: $dgreen;
   font-size: 12px;
   padding: 2px 0 28px 88px;
   margin: 0;
@@ -135,13 +149,14 @@ body .form-input, body #form-message {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 10px;
-  color: #282b28;
+  color: black;
+  color: $dgreen;
   text-decoration: none;
   padding: 7px;
   max-width: 230px;
   margin: 10px 88px;
-  background-color: #f5efdb;
-  border: 2px solid #282b28;
+  background-color: transparent;
+  border: 2px solid $dgreen;
 }
 
 body #form-message {
@@ -152,10 +167,12 @@ body #form-message {
 body #send-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  border: 2px solid #282b28;
+  border: 2px solid $dgreen;
   font-size: 16px;
-  color: #f5efdb;
-  background-color: #f07f8d;
+  color: beige;
+  color: $beige;
+  background-color: pink;
+  background-color: $pink;
   padding: 5px;
   border-radius: 20px;
   max-width: 85px;
@@ -165,7 +182,8 @@ body #send-btn {
 }
 
 body #send-btn:hover {
-  background-color: #1c6c45;
+  background-color: green;
+  background-color: $lgreen;
   transition: all 0.2s ease;
 }
 
@@ -201,7 +219,8 @@ body #footer-link {
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
-  color: #1c6c45;
+  color: green;
+  color: $lgreen;
 }
 
 body .footer-link-wrap {
