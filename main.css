@@ -8,6 +8,8 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 body .navigation {
   display: flex;
@@ -15,8 +17,7 @@ body .navigation {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  padding: 10px 28px;
-  margin: auto;
+  margin: 10px auto;
 }
 body #nav-name {
   color: black;
@@ -25,20 +26,7 @@ body #nav-name {
 body #nav-project {
   color: pink;
   color: #f07f8d;
-  padding-left: 14px;
-  cursor: pointer;
-}
-body .navigation .nav-link-wrap {
-  display: none;
-}
-body .navigation:hover #nav-project {
-  display: none;
-}
-body .navigation:hover .nav-link-wrap {
-  display: inline;
-}
-body .nav-link-wrap {
-  padding-left: 14px;
+  margin-left: 14px;
   cursor: pointer;
 }
 body #nav-link a {
@@ -52,6 +40,19 @@ body .nav-arrow {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
+}
+body .navigation .nav-link-wrap {
+  display: none;
+}
+body .navigation:hover #nav-project {
+  display: none;
+}
+body .navigation:hover .nav-link-wrap {
+  display: inline;
+}
+body .nav-link-wrap {
+  padding-left: 14px;
+  cursor: pointer;
 }
 body .contact-card {
   border: 2px solid #282b28;
@@ -119,7 +120,7 @@ body #form-sub {
   padding: 2px 0 28px 88px;
   margin: 0;
 }
-body .form-input, body body #form-message {
+body .form-input, body #form-message {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 10px;
@@ -193,6 +194,11 @@ body .footer-link-wrap {
   display: inline;
 }
 
+@media only screen and (min-width: 768px) {
+  .navigation {
+    margin: 10px 28px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.scss.map */
 
