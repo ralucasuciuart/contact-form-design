@@ -7,17 +7,23 @@ body {
   background-color: #f5efdb;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 body .navigation {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  margin: 10px auto;
+  margin: 16px 0;
+}
+@media only screen and (min-width: 768px) {
+  body .navigation {
+    justify-content: left;
+    margin-left: 20px;
+  }
 }
 body #nav-name {
   color: black;
@@ -59,30 +65,36 @@ body .contact-card {
   background-color: beige;
   background-color: #f5efdb;
   box-shadow: 13px 13px 0px #282b28;
-  width: 860px;
-  height: 460px;
+  width: 80%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
   z-index: 2;
+}
+@media only screen and (min-width: 800px) {
+  body .contact-card {
+    width: 50%;
+    flex-direction: row;
+  }
 }
 body #green-block {
   background-color: green;
   background-color: #1c6c45;
-  width: 340px;
-  box-shadow: -2px 0 0 #282b28 inset;
+  width: 100%;
   z-index: 3;
 }
 body #card-sticker {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 460px;
+  width: 60%;
   z-index: 4;
   animation: rotate 40s infinite linear;
+}
+@media only screen and (min-width: 800px) {
+  body #card-sticker {
+    width: 100%;
+  }
 }
 @keyframes rotate {
   from {
@@ -96,7 +108,7 @@ body .form {
   display: flex;
   flex-direction: column;
   vertical-align: middle;
-  padding-left: 60px;
+  margin: 16px;
 }
 body #form-title {
   font-family: "Poppins", sans-serif;
@@ -104,7 +116,7 @@ body #form-title {
   color: black;
   color: #282b28;
   font-size: 42px;
-  padding: 28px 0 0 88px;
+  padding-top: 28px;
   margin: 0;
 }
 body #form-title span {
@@ -117,7 +129,7 @@ body #form-sub {
   color: black;
   color: #282b28;
   font-size: 12px;
-  padding: 2px 0 28px 88px;
+  padding: 2px 0 28px 0;
   margin: 0;
 }
 body .form-input, body #form-message {
@@ -129,7 +141,7 @@ body .form-input, body #form-message {
   text-decoration: none;
   padding: 7px;
   max-width: 230px;
-  margin: 10px 88px;
+  margin: 10px 0;
   background-color: transparent;
   border: 2px solid #282b28;
 }
@@ -149,7 +161,6 @@ body #send-btn {
   padding: 5px;
   border-radius: 20px;
   max-width: 85px;
-  margin-left: 88px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -194,11 +205,6 @@ body .footer-link-wrap {
   display: inline;
 }
 
-@media only screen and (min-width: 768px) {
-  .navigation {
-    margin: 10px 28px;
-  }
-}
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.scss.map */
 
