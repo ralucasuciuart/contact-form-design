@@ -5,21 +5,22 @@
 body {
   background-color: beige;
   background-color: #f5efdb;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 body .navigation {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  margin: 16px 0;
+  margin: 16px auto;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   body .navigation {
     justify-content: left;
     margin-left: 20px;
@@ -65,50 +66,38 @@ body .contact-card {
   background-color: beige;
   background-color: #f5efdb;
   box-shadow: 13px 13px 0px #282b28;
-  width: 80%;
-  height: auto;
+  width: 80vw;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-  z-index: 2;
+  margin: 20px auto 40px auto;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 540px) {
   body .contact-card {
-    width: 50%;
+    width: 70vw;
     flex-direction: row;
   }
 }
-body #green-block {
-  background-color: green;
-  background-color: #1c6c45;
-  width: 100%;
-  z-index: 3;
+@media only screen and (min-width: 580px) {
+  body .contact-card {
+    width: 60vw;
+  }
 }
 body #card-sticker {
-  width: 60%;
-  z-index: 4;
-  animation: rotate 40s infinite linear;
+  width: 100%;
+  background-color: #1c6c45;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 800px) {
   body #card-sticker {
     width: 100%;
   }
 }
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 body .form {
   display: flex;
-  flex-direction: column;
-  vertical-align: middle;
-  margin: 16px;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 0 auto;
 }
 body #form-title {
   font-family: "Poppins", sans-serif;
@@ -117,7 +106,10 @@ body #form-title {
   color: #282b28;
   font-size: 42px;
   padding-top: 28px;
-  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: auto;
 }
 body #form-title span {
   color: pink;
@@ -128,25 +120,26 @@ body #form-sub {
   font-weight: 400;
   color: black;
   color: #282b28;
-  font-size: 12px;
+  font-size: 14px;
   padding: 2px 0 28px 0;
-  margin: 0;
+  margin: auto;
+  text-align: center;
 }
 body .form-input, body #form-message {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 14px;
   color: black;
   color: #282b28;
   text-decoration: none;
   padding: 7px;
-  max-width: 230px;
-  margin: 10px 0;
+  width: 70%;
+  margin: 10px auto;
   background-color: transparent;
   border: 2px solid #282b28;
 }
 body #form-message {
-  max-height: 100px;
+  max-height: 20vh;
   margin-bottom: 20px;
 }
 body #send-btn {
@@ -158,10 +151,10 @@ body #send-btn {
   color: #f5efdb;
   background-color: pink;
   background-color: #f07f8d;
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 20px;
-  max-width: 85px;
   cursor: pointer;
+  margin: 10px auto;
   transition: all 0.2s ease;
 }
 body #send-btn:hover {
@@ -170,13 +163,7 @@ body #send-btn:hover {
   transition: all 0.2s ease;
 }
 body .footer {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translate(-30px, -50%);
+  margin: 10px auto;
 }
 body .footer .footer-arrow {
   display: none;

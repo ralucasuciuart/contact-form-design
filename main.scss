@@ -1,40 +1,40 @@
 $pink: #f07f8d;
-$lgreen: #1c6c45;
-$dgreen: #282b28;
+$green: #1c6c45;
+$grey: #282b28;
 $beige: #f5efdb;
 @mixin bold { font-family: 'Poppins', sans-serif; font-weight: 700; }
 @mixin med { font-family: 'Poppins', sans-serif; font-weight: 500; }
 @mixin reg { font-family: 'Poppins', sans-serif; font-weight: 400; }
+@mixin flexcol {display: flex; flex-flow: column wrap; justify-content: center;}
+@mixin flexrow {display: flex; flex-flow: row wrap; align-items: center;}
+
 
 * { box-sizing: border-box;}
 
 body {
   background-color: beige;
   background-color: $beige;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
 // Navigation
   .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include flexrow;
     @include med;
     font-size: 16px;
-    margin: 16px 0;
-    @media only screen and (min-width: 768px) {
+    margin: 16px auto;
+    @media only screen and (min-width: 800px) {
       justify-content: left;
       margin-left: 20px;
     }
   } 
-
   #nav-name {
     color: black;
-    color: $dgreen;
+    color: $grey;
   }
-
   #nav-project {
     color: pink;
     color: $pink;
@@ -53,156 +53,118 @@ body {
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
-
 // Change link on hover 
   .navigation .nav-link-wrap {
     display: none;
   }
-
   .navigation:hover #nav-project {
     display: none;
   }
-
   .navigation:hover .nav-link-wrap {
     display: inline;
   }
-
   .nav-link-wrap {
     padding-left: 14px;
     cursor: pointer;
   }
 // Contact Card
   .contact-card {
-    border: 2px solid $dgreen;
+    border: 2px solid #282b28;
     background-color: beige;
     background-color: $beige;
-    box-shadow: 13px 13px 0px $dgreen;
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-    z-index: 2;
-    @media only screen and (min-width: 800px) {
-      width: 50%;
+    box-shadow: 13px 13px 0px #282b28;
+    width: 80vw;
+    @include flexcol;
+    margin: 20px auto 40px auto;
+    @media only screen and (min-width: 540px) {
+      width: 70vw;
       flex-direction: row;
     }
+    @media only screen and (min-width: 580px) {
+      width: 60vw;
+    }
   }
-
-  #green-block {
-    background-color: green;
-    background-color: $lgreen;
+ #card-sticker {
     width: 100%;
-    z-index: 3;
-  }
-
-  #card-sticker {
-    width: 60%;
-    z-index: 4;
-    animation: rotate 40s infinite linear;
+    background-color: $green;
+    margin: 0 auto;
     @media only screen and (min-width: 800px) {
       width: 100%;
     }
   }
-
-  @keyframes rotate {
-    from {
-     transform: rotate(0deg);
-    }
-    to {
-     transform: rotate(359deg);
-    }
-  }
-
   .form {
-    display: flex;
-    flex-direction: column;
-    vertical-align: middle;
-    margin: 16px
+    @include flexcol;
+    margin: 0 auto;
   }
-
   #form-title {
     @include bold;
     color: black;
-    color: $dgreen;
+    color: $grey;
     font-size: 42px;
     padding-top: 28px;
-    margin: 0;
+    @include flexrow;
+    margin: auto;
   }
-
   #form-title span {
      color: pink;
-     color: $pink
+     color: $pink;
   }
-
   #form-sub {
     @include reg;
     color: black;
-    color: $dgreen;
-    font-size: 12px;
+    color: $grey;
+    font-size: 14px;
     padding: 2px 0 28px 0;
-    margin: 0;
+    margin: auto;
+    text-align: center;
   }
-
   .form-input, #form-message {
     @include reg;
-    font-size: 10px;
+    font-size: 14px;
     color: black;
-    color: $dgreen;
+    color: $grey;
     text-decoration: none;
     padding: 7px;
-    max-width: 230px;
-    margin: 10px 0;
+    width: 70%;
+    margin: 10px auto;
     background-color: transparent;
-    border: 2px solid $dgreen;
+    border: 2px solid #282b28;
   }
-
   #form-message {
-   max-height: 100px;
+   max-height: 20vh;
    margin-bottom: 20px;
   }
-
   #send-btn {
     @include bold;
-    border: 2px solid $dgreen;
+    border: 2px solid #282b28;
     font-size: 16px;
     color: beige;
     color: $beige;
     background-color: pink;
     background-color: $pink;
-    padding: 5px;
+    padding: 5px 20px;
     border-radius: 20px;
-    max-width: 85px;
     cursor: pointer;
+    margin: 10px auto;
     transition: all 0.2s ease;
   }
-
   #send-btn:hover {
     background-color: green;
-    background-color: $lgreen;
+    background-color: $green;
     transition: all 0.2s ease;
   }
 // Footer
   .footer {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translate(-30px, -50%);
+    margin: 10px auto;
   }
-
+// Change link on hover
   .footer .footer-arrow {
     display: none;
   }
-
   .footer:hover .footer-arrow {
     display: inline;
   }
-
+// Link
   .footer-arrow {
     fill: none;
     stroke: #1c6c45;
@@ -211,20 +173,17 @@ body {
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
-
   #footer-link {
     @include med;
     font-size: 16px;
     text-decoration: none;
     color: green;
-    color: $lgreen;
+    color: $green;
   }
-
   .footer-link-wrap {
     cursor: pointer;
     display: inline;
   }
-
 }
 
 /*# sourceMappingURL=main.css.map */
