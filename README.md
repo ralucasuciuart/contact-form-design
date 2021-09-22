@@ -9,4 +9,4 @@ This is a functioning submission form designed and prototyped using Figma. It's 
 * [Formspree](https://www.formspree.io)'s API for form submission
 
 If you like this project and want to see more, you can follow me on 
-[Behance](https://www.behance.net/ralucasuciu), [GitHub](https://www.github.com/ralucasuciuart) check out my [website](https://www.ralucasuciuart.com), or contact me by [email](mailto:ralucasuciuart@gmail.com). Thank you! 🥳
+[Behance](https://www.behance.net/ralucasuciu), [GitHub](https://www.github.com/ralucasuciuart), check out my [website](https://www.ralucasuciuart.com), or contact me by [email](mailto:ralucasuciuart@gmail.com). Thank you! 🥳
