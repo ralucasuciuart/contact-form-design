@@ -5,8 +5,10 @@
 body {
   background-color: beige;
   background-color: #f5efdb;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,10 +22,10 @@ body .navigation {
   font-size: 16px;
   margin: 16px auto;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   body .navigation {
     justify-content: left;
-    margin-left: 20px;
+    margin: 26px;
   }
 }
 body #nav-name {
@@ -72,15 +74,12 @@ body .contact-card {
   justify-content: center;
   margin: 20px auto 40px auto;
 }
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 600px) {
   body .contact-card {
-    width: 70vw;
-    flex-direction: row;
-  }
-}
-@media only screen and (min-width: 580px) {
-  body .contact-card {
-    width: 60vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    max-width: 100%;
   }
 }
 body #card-sticker {
@@ -88,9 +87,10 @@ body #card-sticker {
   background-color: #1c6c45;
   margin: 0 auto;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   body #card-sticker {
-    width: 100%;
+    max-width: 50%;
+    margin: 0;
   }
 }
 body .form {
