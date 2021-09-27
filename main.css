@@ -165,12 +165,6 @@ body #send-btn:hover {
 body .footer {
   margin: 10px auto;
 }
-body .footer .footer-arrow {
-  display: none;
-}
-body .footer:hover .footer-arrow {
-  display: inline;
-}
 body .footer-arrow {
   fill: none;
   stroke: #1c6c45;
